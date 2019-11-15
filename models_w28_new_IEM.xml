@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<source_library title="source library">
+  <source name="Src001" type="ExtendedSource">
+    <spectrum type="PowerLaw">
+      <parameter name="Prefactor" value="74.9999997003148" error="0" scale="1e-20" min="0" free="1" />
+      <parameter name="Index" value="2.66000008583069" error="-0" scale="-1" min="-10" max="10" free="1" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" free="0" />
+    </spectrum>
+    <spatialModel type="RadialGaussian">
+      <parameter name="RA" value="270.344586067263" scale="1" free="1" />
+      <parameter name="DEC" value="-23.2888857655105" scale="1" free="1" />
+      <parameter name="Sigma" value="0.170000001788139" error="0" scale="1" min="0.0002778" free="1" />
+    </spatialModel>
+  </source>
+  <source name="HESS J1800-240A" type="DiffuseSource">
+    <spectrum type="PowerLaw">
+      <parameter name="Prefactor" value="7.65" error="0" scale="1e-19" min="1e-07" max="1000" free="1" />
+      <parameter name="Index" value="2.55" error="0" scale="-1" min="0" max="5" free="0" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" min="0.01" max="1000" free="0" />
+    </spectrum>
+    <spatialModel type="DiffuseMap" file="map_HESSJ1800-240A.fits">
+      <parameter name="Prefactor" value="1" scale="1" min="0.001" max="1000" free="0" />
+    </spatialModel>
+  </source>
+  <source name="HESS J1800-240B" type="DiffuseSource">
+    <spectrum type="PowerLaw">
+      <parameter name="Prefactor" value="7.58" error="0" scale="1e-19" min="1e-07" max="1000" free="1" />
+      <parameter name="Index" value="2.5" error="0" scale="-1" min="0" max="5" free="0" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" min="0.01" max="1000" free="0" />
+    </spectrum>
+    <spatialModel type="DiffuseMap" file="map_HESSJ1800-240B.fits">
+      <parameter name="Prefactor" value="1" scale="1" min="0.001" max="1000" free="0" />
+    </spatialModel>
+  </source>
+  <source name="HESS J1800-240C" type="DiffuseSource">
+    <spectrum type="PowerLaw">
+      <parameter name="Prefactor" value="4.59" error="0" scale="1e-19" min="1e-07" max="1000" free="1" />
+      <parameter name="Index" value="2.31" error="0" scale="-1" min="0" max="5" free="0" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" min="0.01" max="1000" free="0" />
+    </spectrum>
+    <spatialModel type="DiffuseMap" file="map_HESSJ1800-240C.fits">
+      <parameter name="Prefactor" value="1" scale="1" min="0.001" max="1000" free="0" />
+    </spatialModel>
+  </source>
+  <source name="HESS J1804-216" type="ExtendedSource">
+    <spectrum type="PowerLaw">
+      <parameter name="PhotonFlux" value="53.1999999608956" error="0" scale="1e-12" min="0" max="10000000000000" free="1" />
+      <parameter name="Index" value="2.72000002861023" error="-0" scale="-1" min="-10" max="10" free="0" />
+      <parameter name="LowerLimit" value="0.200000002980232" scale="1000000" min="1e-09" max="1000000000" free="0" />
+      <parameter name="UpperLimit" value="100000" scale="1000000" free="0" />
+    </spectrum>
+    <spatialModel type="RadialGaussian">
+      <parameter name="RA" value="271.123755868312" scale="1" free="0" />
+      <parameter name="DEC" value="-21.7325518387236" scale="1" free="0" />
+      <parameter name="Sigma" value="0.200000002980232" error="0" scale="1" min="0.0002778" free="0" />
+    </spatialModel>
+  </source>
+  <source name="pwn_163" type="ExtendedSource">
+    <spectrum type="LogParabola">
+      <parameter name="Prefactor" value="11.5961" error="0" scale="1e-20" min="1e-07" max="10000" free="1" />
+      <parameter name="Index" value="2.15044" error="0" scale="-1" min="0" max="5" free="0" />
+      <parameter name="Curvature" value="0.36066" error="0" scale="-1" min="-5" max="5" free="0" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" min="0.01" max="1000" free="0" />
+    </spectrum>
+    <spatialModel type="RadialGaussian">
+      <parameter name="RA" value="269.788895597985" scale="1" min="-360" max="360" free="0" />
+      <parameter name="DEC" value="-24.9370068786745" scale="1" min="-90" max="90" free="0" />
+      <parameter name="Sigma" value="0.07867" error="0" scale="1" min="0.01" max="10" free="0" />
+    </spatialModel>
+  </source>
+  <source name="pwn_299" type="ExtendedSource">
+    <spectrum type="LogParabola">
+      <parameter name="Prefactor" value="9.58172" error="0" scale="1e-20" min="1e-07" max="10000" free="1" />
+      <parameter name="Index" value="2.00237" error="0" scale="-1" min="0" max="5" free="0" />
+      <parameter name="Curvature" value="0.31722" error="0" scale="-1" min="-5" max="5" free="0" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" min="0.01" max="1000" free="0" />
+    </spectrum>
+    <spatialModel type="RadialGaussian">
+      <parameter name="RA" value="270.18623513366" scale="1" min="-360" max="360" free="0" />
+      <parameter name="DEC" value="-24.0687427306303" scale="1" min="-90" max="90" free="0" />
+      <parameter name="Sigma" value="0.10946" error="0" scale="1" min="0.01" max="10" free="0" />
+    </spatialModel>
+  </source>
+  <source name="composite_47" type="ExtendedSource">
+    <spectrum type="LogParabola">
+      <parameter name="Prefactor" value="26.1628" error="0" scale="1e-20" min="1e-07" max="10000" free="1" />
+      <parameter name="Index" value="2.23286" error="0" scale="-1" min="0" max="5" free="0" />
+      <parameter name="Curvature" value="0.32757" error="0" scale="-1" min="-5" max="5" free="0" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" min="0.01" max="1000" free="0" />
+    </spectrum>
+    <spatialModel type="RadialGaussian">
+      <parameter name="RA" value="270.483616729433" scale="1" min="-360" max="360" free="0" />
+      <parameter name="DEC" value="-19.9487682026926" scale="1" min="-90" max="90" free="0" />
+      <parameter name="Sigma" value="0.01" error="0" scale="1" min="0.01" max="10" free="0" />
+    </spatialModel>
+  </source>
+  <source name="Background" type="CTAIrfBackground">
+    <spectrum type="PowerLaw">
+      <parameter name="Prefactor" value="1" error="0" scale="1" min="0" free="1" />
+      <parameter name="Index" value="0" error="0" scale="1" min="-10" max="10" free="1" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" free="0" />
+    </spectrum>
+  </source>
+  <source name="IEM" type="DiffuseSource">
+    <spectrum type="ConstantValue">
+      <parameter name="Value" value="1" error="0" scale="1" min="1e-05" max="100000" free="1" />
+    </spectrum>
+    <spatialModel type="MapCubeFunction" file="cube_iem.fits.gz">
+      <parameter name="Normalization" value="1" scale="1" min="0.001" max="1000" free="0" />
+    </spatialModel>
+  </source>
+</source_library>

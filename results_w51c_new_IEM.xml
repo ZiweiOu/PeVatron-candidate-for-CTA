@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<source_library title="source library">
+  <source name="Src001" type="ExtendedSource">
+    <spectrum type="PowerLaw">
+      <parameter name="Prefactor" value="96.5720919294585" error="3.19750535243655" scale="1e-20" min="0" free="1" />
+      <parameter name="Index" value="2.5645494743875" error="0.0248371488661494" scale="-1" min="-10" max="10" free="1" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" free="0" />
+    </spectrum>
+    <spatialModel type="RadialGaussian">
+      <parameter name="RA" value="290.818003673157" scale="1" free="0" />
+      <parameter name="DEC" value="14.1450042712362" scale="1" free="0" />
+      <parameter name="Sigma" value="0.119405980139622" error="0.00313766190648207" scale="1" min="0.0002778" free="1" />
+    </spatialModel>
+  </source>
+  <source name="composite_195" type="ExtendedSource">
+    <spectrum type="LogParabola">
+      <parameter name="Prefactor" value="94.5467793001521" error="2.48893070510717" scale="1e-20" min="1e-07" max="10000" free="1" />
+      <parameter name="Index" value="2.30742" scale="-1" min="0" max="5" free="0" />
+      <parameter name="Curvature" value="0.16802" scale="-1" min="-5" max="5" free="0" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" min="0.01" max="1000" free="0" />
+    </spectrum>
+    <spatialModel type="RadialGaussian">
+      <parameter name="RA" value="289.460366514029" scale="1" min="-360" max="360" free="0" />
+      <parameter name="DEC" value="13.5951461654145" scale="1" min="-90" max="90" free="0" />
+      <parameter name="Sigma" value="0.05664" scale="1" min="0.01" max="10" free="0" />
+    </spatialModel>
+  </source>
+  <source name="IEM" type="DiffuseSource">
+    <spectrum type="ConstantValue">
+      <parameter name="Value" value="1.30770309473786" error="0.0816480540939996" scale="1" min="1e-05" max="100000" free="1" />
+    </spectrum>
+    <spatialModel type="MapCubeFunction" file="cube_iem.fits.gz">
+      <parameter name="Normalization" value="1" scale="1" min="0.001" max="1000" free="0" />
+    </spatialModel>
+  </source>
+  <source name="BackgroundModel" type="CTACubeBackground" instrument="CTA,HESS,MAGIC,VERITAS">
+    <spectrum type="PowerLaw">
+      <parameter name="Prefactor" value="0.999543152106042" error="0.00446795982184851" scale="1" min="0.01" max="100" free="1" />
+      <parameter name="Index" value="-0.00163077446937139" error="0.00252318557098091" scale="1" min="-5" max="5" free="1" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" free="0" />
+    </spectrum>
+  </source>
+</source_library>

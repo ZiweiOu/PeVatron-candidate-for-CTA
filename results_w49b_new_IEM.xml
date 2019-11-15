@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<source_library title="source library">
+  <source name="Src001" type="PointSource">
+    <spectrum type="PowerLaw">
+      <parameter name="Prefactor" value="32.7870882255888" error="1.31634376585954" scale="1e-20" min="0" free="1" />
+      <parameter name="Index" value="3.07102432382807" error="0.0389664136068582" scale="-1" min="-10" max="10" free="1" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" free="0" />
+    </spectrum>
+    <spatialModel type="PointSource">
+      <parameter name="RA" value="287.7458037039" scale="1" free="0" />
+      <parameter name="DEC" value="9.10170396567256" scale="1" free="0" />
+    </spatialModel>
+  </source>
+  <source name="HESS J1912+101" type="ExtendedSource">
+    <spectrum type="PowerLaw">
+      <parameter name="Prefactor" value="356.64089453688" error="5.31781874813957" scale="1e-20" min="0" free="1" />
+      <parameter name="Index" value="2.70000004768372" scale="-1" min="-10" max="10" free="0" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" free="0" />
+    </spectrum>
+    <spatialModel type="RadialGaussian">
+      <parameter name="RA" value="288.334759002267" scale="1" free="0" />
+      <parameter name="DEC" value="10.1897200049431" scale="1" free="0" />
+      <parameter name="Sigma" value="0.259999990463257" scale="1" min="0.0002778" free="0" />
+    </spatialModel>
+  </source>
+  <source name="IEM" type="DiffuseSource">
+    <spectrum type="ConstantValue">
+      <parameter name="Value" value="1.44557563289709" error="0.0584487166763796" scale="1" min="1e-05" max="100000" free="1" />
+    </spectrum>
+    <spatialModel type="MapCubeFunction" file="cube_iem.fits.gz">
+      <parameter name="Normalization" value="1" scale="1" min="0.001" max="1000" free="0" />
+    </spatialModel>
+  </source>
+  <source name="BackgroundModel" type="CTACubeBackground" instrument="CTA,HESS,MAGIC,VERITAS">
+    <spectrum type="PowerLaw">
+      <parameter name="Prefactor" value="0.989761875766743" error="0.00404468743976863" scale="1" min="0.01" max="100" free="1" />
+      <parameter name="Index" value="-0.00316134875299745" error="0.00244273879000085" scale="1" min="-5" max="5" free="1" />
+      <parameter name="PivotEnergy" value="1" scale="1000000" free="0" />
+    </spectrum>
+  </source>
+</source_library>
